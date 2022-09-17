@@ -60,8 +60,7 @@ contract CrowdFund {
     ) external {
         require(_startAt >= block.timestamp, "start at < now");
         require(_endAt >= _startAt, "end at < start at");
-        require(_endAt <= block.timestamp + 90 days, "end at > max 
-duration");
+        require(_endAt <= block.timestamp + 90 days, "end at > max duration");
 
         count += 1;
         campaigns[count] = Campaign({
